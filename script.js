@@ -18,6 +18,9 @@ function getToken() {
         .catch(error => console.error('Error:', error));
 }
 
+//genres
+
+
 document.addEventListener('DOMContentLoaded', function () {
     getToken().then(() => {
         loadGenresAndTracks();
@@ -50,7 +53,7 @@ function getGenres() {
         });
 }
 
-let audioPlayer = new Audio(); // Global variable to control audio playback
+let audioPlayer = new Audio(); 
 
 function playTrack(trackUrl) {
     if (audioPlayer.src === trackUrl && !audioPlayer.paused) {
@@ -90,7 +93,7 @@ function getTopTracks() {
                         const trackName = track.track.name;
                         const trackImage = track.track.album.images[0].url;
                         const trackUrl = track.track.preview_url;
-                        const artistName = track.track.artists.map(artist => artist.name).join(', '); // Join multiple artists if present
+                        const artistName = track.track.artists.map(artist => artist.name).join(', '); 
 
 
 
@@ -126,7 +129,7 @@ function getTopTracks() {
         });
 }
 
-
+//artists
 
 document.addEventListener('DOMContentLoaded', function () {
     getToken().then(() => {
