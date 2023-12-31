@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Top 20 Tracks</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="getGenres()">
+  <h1>Top 20 Tracks</h1>
+
+  <div class="menu">
+    <div>
+      <label for="genreSelect">Select a Genre:</label>
+      <select id="genreSelect"></select>
+      <button onclick="getTopTracks()">Get Top Tracks</button>
+    </div>
+
+    <div>
+      <label for="artistSearch">Search for Artist:</label>
+      <input type="text" id="artistSearch" list="artists" placeholder="Enter artist name">
+      <datalist id="artists"></datalist>
+      <button id="searchButton">Search</button>
+  </div>
+  
+  </div>
+  <div id="tracksList" class="tracks-list"></div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
